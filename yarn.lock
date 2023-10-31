@@ -1518,9 +1518,9 @@ __metadata:
   linkType: hard
 
 "cssdb@npm:^7.6.0":
-  version: 7.8.0
-  resolution: "cssdb@npm:7.8.0"
-  checksum: 6799e1abb2e6ad9b51b555addd23be54f62fbaf7b4ee1aeb8ac531757db240a2a87e7d9c6f999153eb8e7ab21f93199bca9223c88847ac1d39ec5d4fb8033260
+  version: 7.9.0
+  resolution: "cssdb@npm:7.9.0"
+  checksum: 7c8082c58a0288d0ee04e8d44357dc9070ad600e02fb446cfaca01d820f3e00f7d7cbd4151a5b155dd6c6b51b60fc1381acf27268ae3fe00cd90b5b86c918a7f
   languageName: node
   linkType: hard
 
@@ -1629,9 +1629,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.4.535":
-  version: 1.4.571
-  resolution: "electron-to-chromium@npm:1.4.571"
-  checksum: a9132ec4480b28ea7092f23787e40b16ee2e7ffe4de57a80edaf0e3fe3823b9f0433279f34e67e3726da321320339283f366e025fe5b6cff135bec5c8ad2a2c0
+  version: 1.4.572
+  resolution: "electron-to-chromium@npm:1.4.572"
+  checksum: 12bcd1ec9bfe6947186951decac2c5bb32188d99ddf1d2a26739a84fb8e1bfa0d6bb439e16a4bdddcf0dddad4e6defcdea1f4bd02964962c198998c6b63f35d3
   languageName: node
   linkType: hard
 
