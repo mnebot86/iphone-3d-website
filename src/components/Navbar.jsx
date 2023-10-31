@@ -39,6 +39,7 @@ const Navbar = () => {
           <li>
             <a className="link-styled">Tv & Home</a>
           </li>
+
           <li>
             <a className="link-styled">Entertainment</a>
           </li>

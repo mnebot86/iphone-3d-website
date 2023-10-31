@@ -72,7 +72,6 @@ export const scrollAnimation = (position, target, isMobile, onUpdate) => {
         scrub: 2,
         immediateRender: false,
       },
-      onUpdate,
     })
     .to(".display-section", {
       opacity: 1,
@@ -83,6 +82,5 @@ export const scrollAnimation = (position, target, isMobile, onUpdate) => {
         scrub: 2,
         immediateRender: false,
       },
-      onUpdate,
     });
 };

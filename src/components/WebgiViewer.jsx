@@ -27,6 +27,7 @@ gsap.registerPlugin(ScrollTrigger);
 const WebgiViewer = forwardRef((props, ref) => {
   const canvasRef = useRef(null);
   const canvasContainerRef = useRef(null);
+
   const [viewerRef, setViewerRef] = useState(null);
   const [targetRef, setTargetRef] = useState(null);
   const [cameraRef, setCameraRef] = useState(null);
@@ -37,6 +38,7 @@ const WebgiViewer = forwardRef((props, ref) => {
   useImperativeHandle(ref, () => ({
     triggerPreview() {
       setPreviewMode(true);
+
       canvasContainerRef.current.style.pointerEvents = "all";
       props.contentRef.current.style.opacity = 0;
 
@@ -77,7 +79,9 @@ const WebgiViewer = forwardRef((props, ref) => {
     });
 
     setViewerRef(viewer);
+
     const isMobileOrTablet = mobileAndTabletCheck();
+
     setIsMobile(isMobileOrTablet);
 
     const manager = await viewer.addPlugin(AssetManagerPlugin);
@@ -108,6 +112,7 @@ const WebgiViewer = forwardRef((props, ref) => {
     if (isMobileOrTablet) {
       position.set(-16.7, 1.17, 11.7);
       target.set(0, 1.37, 0);
+
       props.contentRef.current.className = "mobile-or-tablet";
     }
 
@@ -123,6 +128,7 @@ const WebgiViewer = forwardRef((props, ref) => {
     viewer.addEventListener("preFrame", () => {
       if (needsUpdate) {
         camera.positionTargetUpdated(true);
+
         needsUpdate = false;
       }
     });
@@ -137,7 +143,9 @@ const WebgiViewer = forwardRef((props, ref) => {
   const handleExit = useCallback(() => {
     canvasContainerRef.current.style.pointerEvents = "none";
     props.contentRef.current.style.opacity = 1;
+
     viewerRef.scene.activeCamera.setCameraOptions({ controlsEnabled: false });
+
     setPreviewMode(false);
 
     gsap.to(positionRef, {
@@ -153,6 +161,7 @@ const WebgiViewer = forwardRef((props, ref) => {
       },
       onUpdate: () => {
         viewerRef.setDirty();
+
         cameraRef.positionTargetUpdated(true);
       },
     });
@@ -175,6 +184,7 @@ const WebgiViewer = forwardRef((props, ref) => {
   return (
     <div id="webgi-canvas-container" ref={canvasContainerRef}>
       <canvas id="webgi-canvas" ref={canvasRef} />
+
       {previewMode && (
         <button className="button" onClick={handleExit}>
           Exit

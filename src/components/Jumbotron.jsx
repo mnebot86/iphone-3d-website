@@ -1,6 +1,7 @@
 import React from "react";
 import iPhone from "../assets/images/iphone-14.jpg";
 import HoldingIphone from "../assets/images/iphone-hand.png";
+
 const Jumbotron = () => {
   const handleLearnMore = () => {
     const element = document.querySelector(".sound-section");

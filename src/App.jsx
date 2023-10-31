@@ -1,10 +1,12 @@
-import DisplaySection from "./components/DisplaySection";
-import Jumbotron from "./components/Jumbotron";
-import Navbar from "./components/Navbar";
-import SoundSection from "./components/SoundSection";
-import WebgiViewer from "./components/WebgiViewer";
-import Loader from "./components/Loader";
 import { useRef } from "react";
+import {
+  Loader,
+  Navbar,
+  Jumbotron,
+  SoundSection,
+  DisplaySection,
+  WebgiViewer,
+} from "./components";
 
 const App = () => {
   const webgiViewerRef = useRef();
@@ -17,6 +19,7 @@ const App = () => {
   return (
     <div className="App">
       <Loader />
+
       <div ref={contentRef} id="content">
         <Navbar />
         <Jumbotron />
